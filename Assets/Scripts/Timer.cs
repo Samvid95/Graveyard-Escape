@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
     public string nextLevel;
 	// Use this for initialization
 	void Start () {
-        myTimer = 45;
+        
 	}
 	
 	// Update is called once per frame

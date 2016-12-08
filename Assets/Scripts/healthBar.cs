@@ -6,6 +6,7 @@ public class healthBar : MonoBehaviour {
 
     public Text healthText;
     public LevelManager levelManager;
+    public string levelName;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,7 +17,7 @@ public class healthBar : MonoBehaviour {
         healthText.text = "Lives: " +PlayerMovement.health.ToString("f0");
         if(PlayerMovement.health <= 0)
         {
-            levelManager.LoadLevel("CatGameStartScene");
+            levelManager.LoadLevel(levelName);
         }
 	}
 }

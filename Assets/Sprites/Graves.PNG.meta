@@ -1,0 +1,354 @@
+fileFormatVersion: 2
+guid: 4c358c359dfe5984090123deb8cc6453
+timeCreated: 1481231540
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Graves_0
+    21300002: Graves_1
+    21300004: Graves_2
+    21300006: Graves_3
+    21300008: Graves_4
+    21300010: Graves_5
+    21300012: Graves_6
+    21300014: Graves_7
+    21300016: Graves_8
+    21300018: Graves_9
+    21300020: Graves_10
+    21300022: Graves_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Graves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: -12.5}
+        - {x: -51, y: -23.5}
+        - {x: -52, y: -21.5}
+        - {x: -62, y: 16.5}
+        - {x: -106, y: -20.5}
+        - {x: -117, y: -17.5}
+        - {x: -117, y: -70.5}
+        - {x: -98, y: -98.5}
+        - {x: 128, y: -98.5}
+        - {x: 128, y: 36.5}
+        - {x: 116, y: 84.5}
+        - {x: -37, y: 84.5}
+        - {x: -52, y: 77.5}
+    - name: Graves_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 430
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 53.5}
+        - {x: -49, y: 53.5}
+        - {x: -103, y: -36.5}
+        - {x: -103, y: -61.5}
+        - {x: -91, y: -99.5}
+        - {x: 114, y: -99.5}
+        - {x: 114, y: -26.5}
+        - {x: 89, y: 36.5}
+      - - {x: -128, y: -82.5}
+        - {x: -125, y: -81.5}
+        - {x: -125, y: -78.5}
+        - {x: -127, y: -76.5}
+        - {x: -128, y: -76.5}
+    - name: Graves_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 430
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 106, y: -48.5}
+        - {x: 90, y: -34.5}
+        - {x: 82, y: -30.5}
+        - {x: 77, y: -29.5}
+        - {x: 75, y: -29.5}
+        - {x: 73, y: -34.5}
+        - {x: 57, y: -29.5}
+        - {x: 53, y: -31.5}
+        - {x: 55, y: -47.5}
+        - {x: 57, y: -47.5}
+        - {x: 57, y: -52.5}
+        - {x: 57, y: -49.5}
+        - {x: 55, y: -47.5}
+        - {x: 52, y: -46.5}
+        - {x: 49, y: -4.5}
+        - {x: 70, y: -14.5}
+        - {x: 51, y: 76.5}
+        - {x: 39, y: 81.5}
+        - {x: -12, y: 81.5}
+        - {x: -55, y: 32.5}
+        - {x: -40, y: -64.5}
+        - {x: -46, y: -54.5}
+        - {x: -52, y: -57.5}
+        - {x: -45, y: -45.5}
+        - {x: -44, y: -42.5}
+        - {x: -48, y: -29.5}
+        - {x: -108, y: -30.5}
+        - {x: -108, y: -97.5}
+        - {x: 112, y: -97.5}
+        - {x: 112, y: -49.5}
+        - {x: 110, y: -48.5}
+    - name: Graves_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 430
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 84, y: -84.5}
+        - {x: 80, y: -87.5}
+        - {x: 84, y: -82.5}
+        - {x: 84, y: -80.5}
+        - {x: 91, y: -62.5}
+        - {x: 83, y: -61.5}
+        - {x: 81, y: -64.5}
+        - {x: 70, y: -48.5}
+        - {x: 42, y: -41.5}
+        - {x: 39, y: -49.5}
+        - {x: 40, y: -63.5}
+        - {x: 33, y: -61.5}
+        - {x: 28, y: 38.5}
+        - {x: 24, y: 68.5}
+        - {x: -8, y: 96.5}
+        - {x: -35, y: 96.5}
+        - {x: -72, y: 57.5}
+        - {x: -68, y: 41.5}
+        - {x: -68, y: -64.5}
+        - {x: -69, y: -65.5}
+        - {x: -68, y: -61.5}
+        - {x: -68, y: -59.5}
+        - {x: -70, y: -57.5}
+        - {x: -73, y: -57.5}
+        - {x: -75, y: -58.5}
+        - {x: -81, y: -52.5}
+        - {x: -94, y: -53.5}
+        - {x: -110, y: -54.5}
+        - {x: -121, y: -59.5}
+        - {x: -121, y: -103.5}
+        - {x: 85, y: -103.5}
+        - {x: 91, y: -100.5}
+        - {x: 91, y: -86.5}
+        - {x: 86, y: -84.5}
+    - name: Graves_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 215
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 79.5}
+        - {x: -46, y: 63.5}
+        - {x: -47, y: 32.5}
+        - {x: -53, y: -42.5}
+        - {x: -53, y: -96.5}
+        - {x: 78, y: -96.5}
+        - {x: 78, y: -5.5}
+        - {x: 72, y: 55.5}
+        - {x: 64, y: 79.5}
+    - name: Graves_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 215
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 58.5}
+        - {x: -50, y: 30.5}
+        - {x: -50, y: -90.5}
+        - {x: 62, y: -90.5}
+        - {x: 62, y: 40.5}
+        - {x: 23, y: 58.5}
+    - name: Graves_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 215
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 80.5}
+        - {x: -10, y: 80.5}
+        - {x: -48, y: 40.5}
+        - {x: -48, y: -91.5}
+        - {x: 57, y: -91.5}
+        - {x: 59, y: -89.5}
+        - {x: 59, y: 37.5}
+    - name: Graves_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 215
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 89.5}
+        - {x: -77, y: 53.5}
+        - {x: -77, y: -100.5}
+        - {x: -72, y: -105.5}
+        - {x: 24, y: -105.5}
+        - {x: 24, y: 55.5}
+        - {x: -5, y: 89.5}
+    - name: Graves_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 90.5}
+        - {x: -3, y: 90.5}
+        - {x: -33, y: 86.5}
+        - {x: -41, y: 46.5}
+        - {x: -41, y: -96.5}
+        - {x: -13, y: -96.5}
+        - {x: 46, y: -78.5}
+        - {x: 50, y: -74.5}
+        - {x: 50, y: -15.5}
+        - {x: 43, y: 85.5}
+    - name: Graves_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 66.5}
+        - {x: -33, y: 55.5}
+        - {x: -46, y: 32.5}
+        - {x: -46, y: -90.5}
+        - {x: -12, y: -90.5}
+        - {x: 40, y: -78.5}
+        - {x: 40, y: 46.5}
+        - {x: 21, y: 66.5}
+    - name: Graves_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 78.5}
+        - {x: -43, y: 56.5}
+        - {x: -43, y: -99.5}
+        - {x: 38, y: -99.5}
+        - {x: 38, y: 59.5}
+        - {x: 9, y: 78.5}
+    - name: Graves_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 99.5}
+        - {x: -35, y: 99.5}
+        - {x: -71, y: 67.5}
+        - {x: -71, y: -101.5}
+        - {x: -39, y: -101.5}
+        - {x: -4, y: -95.5}
+        - {x: 9, y: -90.5}
+        - {x: 9, y: 22.5}
+        - {x: 7, y: 66.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

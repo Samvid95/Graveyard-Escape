@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour {
     private float moveVelocity;
     private bool hit = false;
     public static int health = 7;
-
+    public string levelName;
+    public string winLevel;
     public LevelManager levelManager;
 	// Use this for initialization
 	void Start () {
@@ -55,7 +56,7 @@ public class PlayerMovement : MonoBehaviour {
         
         if(health <=0)
         {
-            Debug.Log("Game Over!!");
+            levelManager.LoadLevel(levelName);
         }
     }
 
@@ -73,7 +74,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         if(col.gameObject.tag == "Fence")
         {
-            levelManager.LoadLevel("Act2CutScenes");
+            levelManager.LoadLevel(winLevel);
         }
     }
     

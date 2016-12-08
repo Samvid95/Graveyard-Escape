@@ -14,7 +14,7 @@ public class Bird : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Z))
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
     }
 
@@ -25,6 +25,10 @@ public class Bird : MonoBehaviour {
         {
             Debug.Log("Wanted this collision!!");
             levelManager.LoadLevel("Act3CutScenes");
+        }
+        else if(coll.gameObject.tag == "Boundry")
+        {
+            Debug.Log("");
         }
         else
         {
