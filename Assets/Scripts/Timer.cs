@@ -5,8 +5,9 @@ using System.Collections;
 public class Timer : MonoBehaviour {
 
     public Text timeText;
-    public static float myTimer = 30;
+    public float myTimer = 90;
     public LevelManager levelManager;
+    public string nextLevel;
 	// Use this for initialization
 	void Start () {
         myTimer = 45;
@@ -18,7 +19,7 @@ public class Timer : MonoBehaviour {
         timeText.text = "Time left: " + myTimer.ToString("f0"); 
         if(myTimer <= 0)
         {
-            levelManager.LoadLevel("CatGameStartScene");
+            levelManager.LoadLevel(nextLevel);
         }
 	}
 }
