@@ -15,7 +15,7 @@ public class Bird : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Z))
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0.03f,1.0f) * force);
     }
 
     void OnCollisionEnter2D(Collision2D coll)

@@ -26,11 +26,13 @@ public class TextChanger : MonoBehaviour {
 
     void ChangeText()
     {
-        if(i < elementSize-1)
+        if(i < elementSize-2)
         {
-            text[i].GetComponent<Text>().enabled = false;
+            
+            text[i].GetComponent<Text>().enabled = true;
             text[i + 1].GetComponent<Text>().enabled = true;
             i++;
+            text[i - 1].GetComponent<Text>().enabled = false; 
             Invoke("ChangeText", Readtime);
         }
         else

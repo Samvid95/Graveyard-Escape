@@ -3,44 +3,52 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
     public float movementSpeed;
-    
-    private float moveVelocity;
+    public float jumpSpeed;
+
     private bool hit = false;
-    public static int health = 7;
-    public string levelName;
+    public static int health = 9;
+    public string looseLevel;
     public string winLevel;
     public LevelManager levelManager;
-	// Use this for initialization
-	void Start () {
-        health = 7;
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-       
+
+    private float moveVelocity;
+    private bool grounded;
+    private Vector2 direction;
+
+
+    Vector3 screenSize;
+    // Use this for initialization
+    void Start()
+    {
+        direction = new Vector2(1.0f, 0.0f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
         moveVelocity = 0;
-       
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            //Debug.Log("Right Arrow is pressed!!");
-            GetComponent<Animator>().SetBool("Move", true);
-            GetComponent<Animator>().Play("Standing");
-            GetComponent<Animator>().SetBool("Move", false);
-            moveVelocity += movementSpeed;                
-        }
+        
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            {
+                GetComponent<Animator>().SetBool("Move", true);
+                GetComponent<Animator>().Play("Standing");
+                GetComponent<Animator>().SetBool("Move", false);
+                moveVelocity += movementSpeed;
+                direction.x = 1.0f;
 
-         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-         {
-            //Debug.Log("Left Arrow is pressed!!");
-            GetComponent<Animator>().SetBool("Move", true);
-            GetComponent<Animator>().Play("Standing");
-            GetComponent<Animator>().SetBool("Move", false);
-            moveVelocity -= movementSpeed;                
-         }
+            }
 
-        //Debug.Log("The movement velocity should be:" + new Vector2(moveVelocity,GetComponent<Rigidbody2D>().velocity.y)); 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, transform.position.y);
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            {
+            // GetComponent<Animator>().SetBool("moveRight", false);
+                GetComponent<Animator>().SetBool("Move", true);
+                GetComponent<Animator>().Play("Standing");
+                GetComponent<Animator>().SetBool("Move", false);
+                moveVelocity -= movementSpeed;
+                direction.x = -1.0f;
+
+            }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -48,38 +56,58 @@ public class PlayerMovement : MonoBehaviour {
             GetComponent<Animator>().SetBool("Fight", true);
             //Debug.Log(GetComponent<Animator>().GetBool("Fight"));
             GetComponent<Animator>().Play("Claw");
-           // Debug.Log(GetComponent<Animator>().GetBool("Fight"));
+            // Debug.Log(GetComponent<Animator>().GetBool("Fight"));
             GetComponent<Animator>().SetBool("Fight", false);
 
         }
-        hit = false;
-        
-        if(health <=0)
+        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+
+        if (Input.GetKey(KeyCode.X) && grounded)
         {
-            levelManager.LoadLevel(levelName);
+            GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, jumpSpeed, 0);
+        }
+        hit = false;
+
+        if (health <= 0)
+        {
+            levelManager.LoadLevel(looseLevel);
         }
     }
 
     
+
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && col.gameObject.tag== "Ghost")
+        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && col.gameObject.tag == "Ghost")
         {
             Destroy(col.gameObject);
         }
-        else if(col.gameObject.tag == "Ghost")
+        else if (col.gameObject.tag == "Ghost")
         {
             health -= 1;
             Destroy(col.gameObject);
         }
-        if(col.gameObject.tag == "Fence")
+        if (col.gameObject.tag == "Monster1")
+        {     
+            health -= 1;
+        }
+
+        if (col.gameObject.tag == "Ground")
+        {
+            grounded = true;
+        }
+
+        if (col.gameObject.tag == "Fence")
         {
             levelManager.LoadLevel(winLevel);
         }
     }
-    
+
     void OnCollisionExit2D(Collision2D col)
     {
-       
+        if (col.gameObject.tag == "Ground")
+        {
+            grounded = false;
+        }
     }
 }
