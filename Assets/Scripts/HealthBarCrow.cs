@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class HealthBarMixed : MonoBehaviour {
+public class HealthBarCrow : MonoBehaviour {
 
     public Text healthText;
     public LevelManager levelManager;
@@ -16,8 +16,8 @@ public class HealthBarMixed : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Lives: " + catMoveMixed.health.ToString("f0");
-        if (catMoveMixed.health <= 0)
+        healthText.text = "Lives: " + Bird.lives.ToString("f0");
+        if (Bird.lives <= 0)
         {
             levelManager.LoadLevel(levelName);
         }
