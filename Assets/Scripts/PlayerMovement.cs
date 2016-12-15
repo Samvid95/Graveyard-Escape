@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        health = 9;
         direction = new Vector2(1.0f, 0.0f);
     }
 

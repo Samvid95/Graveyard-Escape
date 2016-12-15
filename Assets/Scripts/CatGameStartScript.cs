@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CatGameStartScript : MonoBehaviour {
     public LevelManager levelManager;
+    public string levelName;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,7 +13,14 @@ public class CatGameStartScript : MonoBehaviour {
 	void Update () {
         if (Input.GetKey(KeyCode.Space))
         {
-            levelManager.LoadNextLevel();
+            if (levelName == null)
+            {
+                levelManager.LoadNextLevel();
+            }
+            else
+            {
+                levelManager.LoadLevel(levelName);
+            }
         }
 	}
 }

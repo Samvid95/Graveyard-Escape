@@ -38,7 +38,7 @@ public class Bird : MonoBehaviour {
         if (coll.gameObject.tag == "WinPoint")
         {
             Debug.Log("Wanted this collision!!");
-            levelManager.LoadLevel("Act3CutScenes");
+            levelManager.LoadLevel("Act3CutScenesPart1");
         }
         else if(coll.gameObject.tag == "Boundry")
         {

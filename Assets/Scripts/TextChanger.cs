@@ -26,7 +26,7 @@ public class TextChanger : MonoBehaviour {
 
     void ChangeText()
     {
-        if(i < elementSize-2)
+        if(i < elementSize-1)
         {
             
             text[i].GetComponent<Text>().enabled = true;

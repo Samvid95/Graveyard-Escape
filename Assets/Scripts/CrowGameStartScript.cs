@@ -4,6 +4,7 @@ using System.Collections;
 public class CrowGameStartScript : MonoBehaviour {
 
     public LevelManager levelManager;
+    public string levelName;
     // Use this for initialization
     void Start()
     {
@@ -15,7 +16,14 @@ public class CrowGameStartScript : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.Z))
         {
-            levelManager.LoadNextLevel();
+            if(levelName == null)
+            {
+                levelManager.LoadNextLevel();
+            }
+            else
+            {
+                levelManager.LoadLevel(levelName);
+            }
         }
     }
 }

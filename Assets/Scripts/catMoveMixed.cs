@@ -80,16 +80,17 @@ public class catMoveMixed : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && col.gameObject.tag == "Ghost")
+        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && (col.gameObject.tag == "Ghost" || col.gameObject.tag == "BirdOpponent"))
         {
             Destroy(col.gameObject);
         }
-        else if (col.gameObject.tag == "Ghost")
+        else if (col.gameObject.tag == "Ghost" || col.gameObject.tag == "BirdOpponent")
         {
             health -= 1;
-            Debug.Log("The health Value is:" + health);
+            
             Destroy(col.gameObject);
         }
+      
         if (col.gameObject.tag == "Monster1")
         {
             health -= 1;
@@ -104,15 +105,7 @@ public class catMoveMixed : MonoBehaviour {
         {
             levelManager.LoadLevel(winLevel);
         }
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && col.gameObject.tag == "BirdOpponent")
-        {
-            Destroy(col.gameObject);
-        }
-        else if (col.gameObject.tag == "BirdOpponent"){
-            
-            health -= 1;
-            Destroy(col.gameObject);
-        }
+      
     }
 
     void OnCollisionExit2D(Collision2D col)

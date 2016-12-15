@@ -36,11 +36,7 @@ public class CatFlyMixed : MonoBehaviour {
         {
             Debug.Log("");
         }
-        else if (coll.gameObject.layer == 10)
-        {
-            catMoveMixed.health--;
-            Destroy(coll.gameObject);
-        }
+       
       
 
     }
