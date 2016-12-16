@@ -7,8 +7,8 @@ public class catMoveMixed : MonoBehaviour {
 
     private bool hit = false;
     public static int health = 9;
-    public string looseLevel;
-    public string winLevel;
+    public  string looseLevel;
+    public  string winLevel;
     public LevelManager levelManager;
 
     private float moveVelocity;
@@ -80,11 +80,11 @@ public class catMoveMixed : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && (col.gameObject.tag == "Ghost" || col.gameObject.tag == "BirdOpponent"))
+        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && (col.gameObject.tag == "Ghost"))
         {
             Destroy(col.gameObject);
         }
-        else if (col.gameObject.tag == "Ghost" || col.gameObject.tag == "BirdOpponent")
+        else if (col.gameObject.tag == "Ghost")
         {
             health -= 1;
             
@@ -105,6 +105,10 @@ public class catMoveMixed : MonoBehaviour {
         {
             levelManager.LoadLevel(winLevel);
         }
+        if(col.gameObject.tag == "DeathBoundry")
+        {
+            health -= 9;
+        }
       
     }
 
@@ -118,7 +122,22 @@ public class catMoveMixed : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        GetComponent<CatFlyMixed>().enabled = true;
-        Destroy(coll.gameObject);
+
+        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Claw") && coll.gameObject.tag == "BirdOpponent")
+        {
+            Destroy(coll.gameObject);
+        }
+        else if (coll.gameObject.tag == "BirdOpponent")
+        {
+            health -= 1;
+
+            Destroy(coll.gameObject);
+        }
+        else
+        {
+            GetComponent<CatFlyMixed>().enabled = true;
+            Destroy(coll.gameObject);
+        }
+        
     }
 }

@@ -44,16 +44,19 @@ public class Bird : MonoBehaviour {
         {
             Debug.Log("");
         }
-        else if(coll.gameObject.layer == 10)
-        {
-            lives--;
-            Destroy(coll.gameObject);
-        }
         else
         {
             lives--;
         }
         
     } 
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.tag == "BirdOpponent")
+        {
+            lives--;
+            Destroy(coll.gameObject);
+        }
+    }
 }
 
